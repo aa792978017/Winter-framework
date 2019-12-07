@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Winter-framework</groupId>
+  <artifactId>Winter-framework-1.0</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <!--打包的类型-->
+  <!--<packaging>war</packaging>-->
+  <packaging>jar</packaging>
+  <name>Winter-framework</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+
+  <properties>
+    <!--    定义全局属性-->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <java.version>1.8</java.version>
+    <junit.version>4.11</junit.version>
+    <fastjson.version>1.2.38</fastjson.version>
+    <checkstyle.vesion>6.12</checkstyle.vesion>
+    <commons.codec.version>1.10</commons.codec.version>
+    <commons.lang3.version>3.6</commons.lang3.version>
+    <jacoco.version>0.7.7.201606060606</jacoco.version>
+    <jacoco.exec.location>target/coverage-reports/jacoco-unit.exec</jacoco.exec.location>
+    <!--    <check.config.location>${basedir}/../conf/checkstyle_ruleset_supms.xml</check.config.location>-->
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+
+    <!--做md5-->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons.codec.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons.lang3.version}</version>
+    </dependency>
+
+    <!--代码风格检查 命令：mvn -B -f pom.xml clean install checkstyle:checkstyle -Dmaven.test.skip=true-->
+    <dependency>
+      <groupId>com.puppycrawl.tools</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>${checkstyle.vesion}</version>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+
+  </build>
+</project>
